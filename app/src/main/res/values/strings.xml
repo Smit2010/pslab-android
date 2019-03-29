@@ -13,6 +13,7 @@
     <string name="nav_about_us">About Us</string>
     <string name="nav_report">Feedback &amp; Bugs</string>
     <string name="nav_help_feedback">FAQs</string>
+    <string name="nav_share">Share App</string>
 
     <string name="pslab_pinlayout">Pin Layout</string>
     <string name="pslab_pinlayout_front">Pin Layout Front</string>
@@ -42,7 +43,7 @@
         <item>Instruments</item>
         <item>Device</item>
         <item>Settings</item>
-        <item>PSLab</item>
+        <item>About Us</item>
         <item>FAQs</item>
     </string-array>
 
@@ -792,7 +793,7 @@
     <string name="text_parallel_axes">Select axes parallel to ground</string>
     <string name="unit_degree">°</string>
     <string name="compass_test_value">360°</string>
-    <string name="show_axis_help">Get current axis</string>
+    <string name="show_axis_help">Show Guide</string>
 
     <string name="compass_bottom_sheet_heading">Compass</string>
     <string name="compass_bottom_sheet_text">Compass instrument is used to navigate and to find magnetic field along axis. Compass instrument in PSLab app can be used with built-in mobile sensors or with sensor HMC5883L.</string>
@@ -846,7 +847,7 @@
     <string name="multimeter_dialog_heading">Multimeter</string>
     <string name="multimeter_default_value">0.00</string>
     <string name="multimeter_configurations">Multimeter Configurations</string>
-    <string name="multimeter_dialog_text">Use PV1, PV2, PV3 Connect the SEN and CAP pins to the resistor and capacitor respectively as shown in the figure to measure the resistance or capacitance of the connected element.</string>
+    <string name="multimeter_dialog_text">Use PV1, PV2, PV3 Connect the SEN and CAP pins to the resistor and capacitor respectively as shown in the figure to measure the resistance or capacitance of the connected element. \n\n\u2022 CH1 and CH2 can read a free range of voltage. CH3, SEN, CAP, AN8 can only read from 0V to 3.30V</string>
     <string name="multimeter_dialog_description">\u2022 To measure the voltage directly connect the power source(eg PV1,PV2 and PV3) to the channel pins as shown in the figure.\n\n\u2022 Similarly to measure frequency or count pulse connect SQ1,SQ2,SQ3 or SQ4 pins to ID1,ID2,ID3 or ID4.\n\n
         <b>Different Sections</b>\n\n
         <b>Resistance:</b> Measures the resistance of the element connected between the SEN and GND pin of the PSLab device.\n\n
@@ -930,6 +931,24 @@
     <string name="no_lux_sensor">Device does not have a Lux sensor</string>
     <string name="light_meter">Light Meter</string>
     <string name="select_light_sensor">Select Sensor</string>
+    <string name="active_sensor">Active Sensor</string>
+    <string name="setting_baro">setting_baro_sensor_type</string>
+    <string name="include_location">Include the location data in the logged file</string>
+    <string name="location_sensor">include_location_sensor_data</string>
+    <string name="include_cap">Include Location Data</string>
+    <string name="time_string">Please provide time interval(in ms) at which data will be updated</string>
+    <string name="setting_baro_update">setting_baro_update_period</string>
+    <string name="setting_lux_update">setting_lux_update_period</string>
+    <string name="default_value_baro">1.1</string>
+    <string name="default_value_lux">1</string>
+    <string name="dialogue_msg_atm">Please provide maximum limit of atm value to be recorded</string>
+    <string name="dialogue_msg_lux">Please provide maximum limit of Lux value to be recorded</string>
+    <string name="high_limit_baro">setting_baro_high_limit</string>
+    <string name="high_limit_lux">setting_lux_high_limit</string>
+    <string name="setting_lux_type">setting_lux_sensor_type</string>
+    <string name="setting_lux_sensor_gain">setting_lux_sensor_gain</string>
+    <string name="set_gain_sensor">Please set gain of the sensor</string>
+    <string name="sensor_gain">Sensor Gain</string>
     <string-array name="lux_sensors">
         <item>Built-In</item>
         <item>BH1750</item>
@@ -1080,6 +1099,10 @@
     \u2022 Select the sensor by going to the <b>Configure</b> tab from the bottom navigation bar and choose BMP-180 in the drop down menu under <b>Select Sensor</b>.</string>
 
     <string name="lux_meter">Lux Meter</string>
+    <string name="lux_default_1000">1000</string>
+    <string name="lux_default_2000">2000</string>
+    <string name="lux_default_0">0</string>
+    <string name="lux_summary">1000 ms</string>
     <string name="log_saved_directory">Log saved in\n</string>
     <string name="log_saved_failed">Could not save the log. Please check storage permission.</string>
     <string name="open">Open</string>
