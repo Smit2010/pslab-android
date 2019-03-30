@@ -21,6 +21,7 @@
         android:roundIcon="@drawable/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.BaseDrawerActivity"></activity>
         <activity
             android:name=".activity.SplashActivity"
             android:screenOrientation="portrait"

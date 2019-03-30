@@ -28,7 +28,7 @@ import io.pslab.others.ScienceLabCommon;
 
 import static io.pslab.others.ScienceLabCommon.scienceLab;
 
-public abstract class SensorDrawerActivity extends AppCompatActivity {
+public class BaseDrawerActivity extends AppCompatActivity {
 
     public NavigationView navigationView;
     DrawerLayout drawer;
@@ -43,8 +43,6 @@ public abstract class SensorDrawerActivity extends AppCompatActivity {
     private static String CURRENT_TAG = "back";
     private String[] activityTitles;
 
-    public abstract String getSensorName();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,16 +50,16 @@ public abstract class SensorDrawerActivity extends AppCompatActivity {
 
     @Override
     public void setContentView(int layoutResID) {
-        drawer = (DrawerLayout) getLayoutInflater().inflate(R.layout.activity_sensor_drawer, null);
-        FrameLayout activityContainer = drawer.findViewById(R.id.frame_sensor);
+        drawer = (DrawerLayout) getLayoutInflater().inflate(R.layout.activity_base_drawer, null);
+        FrameLayout activityContainer = drawer.findViewById(R.id.frame_base);
         getLayoutInflater().inflate(layoutResID, activityContainer, true);
         super.setContentView(drawer);
-        toolbar = findViewById(R.id.toolbar_sensor);
+        toolbar = findViewById(R.id.toolbar_base);
         setSupportActionBar(toolbar);
-        navigationView = findViewById(R.id.nav_view_sensor);
+        navigationView = findViewById(R.id.nav_view_base);
         setUpNavigationView();
         navHeader = navigationView.getHeaderView(0);
-        customTabService = new CustomTabService(SensorDrawerActivity.this);
+        customTabService = new CustomTabService(BaseDrawerActivity.this);
         txtName = navHeader.findViewById(io.pslab.R.id.name);
         activityTitles = getResources().getStringArray(io.pslab.R.array.nav_item_activity_titles);
         setPSLabVersionIDs();
@@ -77,7 +75,7 @@ public abstract class SensorDrawerActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.fade_in,
                 R.anim.fade_out);
-        fragmentTransaction.replace(R.id.sensor_frame, fragment, CURRENT_TAG);
+        fragmentTransaction.replace(R.id.multimeter_cl, fragment, CURRENT_TAG);
         fragmentTransaction.commit();
         fragmentTransaction.addToBackStack(null);
         if (drawer != null) {
@@ -231,7 +229,7 @@ public abstract class SensorDrawerActivity extends AppCompatActivity {
         if (navItemIndex != 0) {
             navItemIndex = 0;
             getSupportFragmentManager().popBackStack();
-            toolbar.setTitle(getSensorName());
+            //toolbar.setTitle(getSensorName());
             int size_menu = navigationView.getMenu().size();
             for (int i = 0; i < size_menu; i++) {
                 final MenuItem item = navigationView.getMenu().getItem(i);

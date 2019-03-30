@@ -36,7 +36,7 @@ import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.pslab.activity.DrawerActivity;
+import io.pslab.activity.SensorDrawerActivity;
 import io.pslab.R;
 import io.pslab.activity.DataLoggerActivity;
 import io.pslab.activity.MapsActivity;
@@ -57,7 +57,7 @@ import io.realm.RealmObject;
  * Created by Padmal on 10/20/18.
  */
 
-public abstract class PSLabSensor extends DrawerActivity {
+public abstract class PSLabSensor extends SensorDrawerActivity {
 
     public boolean isRecording = false;
     public boolean locationEnabled = true;

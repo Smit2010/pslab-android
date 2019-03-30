@@ -49,15 +49,15 @@ import it.beppi.knoblibrary.Knob;
  * Created by Abhinav Raj on 26/5/18.
  */
 
-public class MultimeterActivity extends AppCompatActivity {
+public class MultimeterActivity extends BaseDrawerActivity {
 
     public static final String PREFS_NAME = "customDialogPreference";
     public static final String NAME = "savingData";
     private static final int MY_PERMISSIONS_REQUEST_STORAGE_FOR_DATA = 101;
     public boolean recordData = false;
     public CSVLogger multimeterLogger = null;
-    @BindView(R.id.multimeter_toolbar)
-    Toolbar mToolbar;
+//    @BindView(R.id.multimeter_toolbar)
+//    Toolbar mToolbar;
     @BindView(R.id.quantity)
     TextView quantity;
     @BindView(R.id.unit)
@@ -111,9 +111,9 @@ public class MultimeterActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         scienceLab = ScienceLabCommon.scienceLab;
         knobMarker = getResources().getStringArray(io.pslab.R.array.multimeter_knob_states);
-        setSupportActionBar(mToolbar);
+        //setSupportActionBar(mToolbar);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        //actionBar.setDisplayHomeAsUpEnabled(true);
 
         setUpBottomSheet();
         tvShadow.setOnClickListener(new View.OnClickListener() {
